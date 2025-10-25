@@ -1,0 +1,169 @@
+body {
+  background: #0d1b2a;
+  color: #e0e1dd;
+  font-family: system-ui, sans-serif;
+}
+
+.navbar {
+  background: #0056b3;
+  border-bottom: 3px solid #ffc107;
+}
+
+/* Navbar Brand */
+.navbar .navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  color: #f8f9fa !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffc107 !important;
+}
+
+/* Navbar toggler for mobile view */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Brand badge */
+.brand-badge {
+  background: #ffc107;
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+/* Section titles */
+.section-title {
+  border-left: 6px solid #ffc107;
+  padding-left: 0.75rem;
+  margin: 1rem 0;
+}
+
+/* Document items */
+.doc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background: #0056b3;
+  color: #ffffff;
+}
+
+/* Gallery */
+.gallery img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Google Map responsive */
+.map-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  height: 400px;
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* photo zoom */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1055;
+}
+.lightbox:target {
+  display: flex;
+}
+.lightbox-inner {
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: auto;
+  background: rgba(255,255,255,0.04);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.lightbox-inner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transform-origin: center center;
+  cursor: zoom-in;
+}
+
+/* checkbox-control zoom */
+.zoom-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.zoom-toggle label {
+  user-select: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 0.9rem;
+  color: #fff;
+}
+.zoom-toggle a.btn {
+  padding: 0.25rem 0.75rem;
+}
+.lightbox input[type="checkbox"] {
+  display: none;
+}
+
+.lightbox input[type="checkbox"]:checked ~ .lightbox-inner img {
+  transform: scale(1.8);
+  cursor: zoom-out;
+}
+
+/* close area */
+.lightbox a.lb-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(2px);
+}
+
+/* gallery thumbs clickable */
+.gallery .thumb {
+  display: block;
+  text-decoration: none;
+}
